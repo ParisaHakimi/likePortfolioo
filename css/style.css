@@ -1,0 +1,355 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(
+    to right,
+    #fec89a,
+    #fcd2af,
+    #f9dcc4,
+    #f9e5d8,
+    #f8edeb
+  );
+  font-family: "Roboto", sans-serif;
+  color: #424242;
+  width: 100%;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.second-font-family {
+  font-family: "Satisfy", cursive;
+}
+
+#header {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top-container {
+  width: 100%;
+  min-height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-image {
+  width: 100%;
+  justify-content: center;
+}
+
+.my-image img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.main-container {
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .my-image img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+#main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* nav section */
+
+.menu-container {
+  flex-grow: 1;
+}
+
+.ul-menu {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu li a {
+  color: #424242;
+  background-color: #e3e3e3;
+  padding: 1.2rem 3.5rem;
+  border-radius: 5px;
+}
+
+#menu li a span {
+  transition: 0.6s;
+}
+
+#menu li a:hover span {
+  color: #006466;
+}
+
+.fixed-menu {
+  width: 90%;
+  position: fixed;
+  top: 0;
+  opacity: 0.95;
+  transition: 1s;
+  z-index: 100;
+}
+
+.fixed-menu-bgc {
+  background-color: #e3e3e3;
+}
+
+.fixed-menu .menu-container #menu li a {
+  background-color: #d3d3d3;
+  color: #000;
+}
+
+@media screen and (max-width: 910px) {
+  #menu li a {
+    padding: 1.3rem 3rem;
+  }
+}
+
+@media screen and (max-width: 783px) {
+  .navbar-nav {
+    display: flex;
+    align-items: flex-start;
+  }
+  #menu li a span {
+    border: none;
+  }
+  #menu li {
+    width: 100%;
+  }
+  #menu .ul-menu li a {
+    padding: 0.4rem 0.7rem;
+    font-size: 1rem;
+    border-radius: 2px;
+  }
+  #menu li a:hover {
+    letter-spacing: 1px;
+  }
+}
+
+.elevator {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #424242;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  color: #424242;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 100%;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1.4rem;
+  border-bottom: 3px solid #006466;
+}
+
+/* about-me section */
+
+#about-me > p {
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* projects section */
+
+#projects {
+  width: 100%;
+}
+.project-container {
+  width: 100%;
+}
+.projects-wrapper {
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project {
+  justify-content: space-between;
+  width: 49%;
+  min-height: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+.project > a {
+  perspective: 1000px;
+  flex-direction: column;
+  overflow: hidden;
+}
+.project > a img {
+  width: 100%;
+  transition: 0.3s;
+}
+.project > a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.project > a:hover::after {
+  opacity: 0;
+}
+.project > a:hover > img {
+  transform: scale(1.1);
+}
+
+.project-img-caption {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 20px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  transform: rotateX(95deg);
+  transform-origin: left bottom;
+  transition: 0.6s;
+  opacity: 0;
+}
+
+.project .weatherCast:hover > .project-img-caption {
+  transform: rotateX(0);
+  opacity: 1;
+}
+.project-btn {
+  justify-content: space-around;
+  margin-top: 1.3em;
+}
+.git a,
+.live a {
+  color: #fff;
+}
+.project > p {
+  margin-top: 1em;
+  text-align: center;
+  padding: 0 1em;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .project {
+    width: 80%;
+    margin: 1em auto;
+  }
+  .btn {
+    padding: 0.275rem 0.65rem;
+    font-size: 0.8rem;
+  }
+  .project > p {
+    font-size: 0.8rem;
+  }
+}
+/* resume section */
+.resume {
+  background-color: #3d3c3c7c;
+  color: #f3f3f3;
+  border-radius: 2rem;
+  width: 15rem;
+  margin: 10px auto;
+  transition: 0.5s;
+  font-size: inherit;
+}
+
+.resume:hover {
+  background-color: #006466;
+  color: #f3f3f3;
+  letter-spacing: 0.05rem;
+}
+#resume {
+  min-height: 10em;
+}
+@media screen and (max-width: 767px) {
+  .resume {
+    width: 60%;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.7rem;
+  }
+}
+/* get in touch section */
+#get-in-touch {
+  min-height: 17em;
+}
+#get-in-touch p {
+  margin: 1em auto;
+  text-align: center;
+}
+.contact-info {
+  color: wheat;
+  justify-content: center;
+  align-items: center;
+}
+.contact-wrapper {
+  justify-content: space-around;
+  width: 70%;
+}
+.contact-wrapper .contact {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.contact-wrapper .contact > a {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  color: #000;
+  text-align: center;
+  line-height: 3em;
+}
